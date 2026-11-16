@@ -23,18 +23,16 @@
 /* Reference typography: regular body and name, stronger section and paper headings. */
 body,h1,.bio a{font-weight:400}h2{font-weight:600}h3,.research-copy strong,.news-row strong,.authors strong{font-weight:700}
 
-/* Publication preview: original architecture beside paper details. */
-.publication{grid-template-columns:190px minmax(0,1fr);gap:26px;align-items:center;padding:22px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 5px 20px rgba(28,41,58,.035)}
-.publication-figure{display:flex;flex-direction:column;gap:10px;min-width:0;color:var(--muted)}
-.publication-figure:hover{text-decoration:none}
-.publication-figure .publication-venue{align-self:flex-start;margin:0;font-size:12px;padding:4px 10px}
-.publication-figure img{display:block;width:100%;height:auto;object-fit:contain}
-.figure-hint{font-size:11px;color:var(--muted)}
-.publication-figure:hover .figure-hint{color:var(--link)}
-.publication-body h3{font-size:18px;line-height:1.5;margin-bottom:12px}
-.publication-links{margin-top:16px}
-@media(max-width:760px){.publication{grid-template-columns:160px minmax(0,1fr);gap:20px;padding:18px}}
-@media(max-width:480px){.publication{grid-template-columns:1fr;gap:16px;padding:18px}.publication-figure{width:160px;max-width:100%}.publication-body h3{font-size:17px}}
+/* Compact image-and-text publication rows. */
+.publication{grid-template-columns:180px minmax(0,1fr);gap:28px;align-items:start;padding:8px 0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.publication-figure{display:block;min-width:0;margin-top:3px;padding:10px 6px;border:1.5px solid #b5b5b5;border-radius:16px;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.045);overflow:hidden}
+.publication-figure:hover{border-color:#929292;text-decoration:none}
+.publication-figure img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+.publication-body h3{font-size:19px;line-height:1.45;margin:0 0 10px}
+.publication-conference{font-size:14px;line-height:1.5;color:#626d7d;font-style:italic;margin:7px 0 0}
+.publication-links{margin-top:13px}
+@media(max-width:760px){.publication{grid-template-columns:145px minmax(0,1fr);gap:22px}.publication-body h3{font-size:18px}}
+@media(max-width:480px){.publication{grid-template-columns:100px minmax(0,1fr);gap:16px}.publication-figure{padding:6px 3px;border-radius:12px}.publication-body h3{font-size:17px}.publication-links{gap:6px}.publication-links a{padding:7px 9px;min-height:35px;font-size:12px}}
 
 /* Keep linked author names in the same black as the surrounding text. */
 .authors a,.authors a:hover,.authors a:visited{color:#000}
