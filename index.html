@@ -12,8 +12,8 @@
   <title>Wenhao Gao — Academic Homepage</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261116-authors-larger">
-  <script src="script.js?v=20261025e" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261116-dialog">
+  <script src="script.js?v=20261116-dialog" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -72,7 +72,7 @@
     <section id="publications" class="content-section" aria-labelledby="publications-heading">
       <div class="section-heading"><h2 id="publications-heading">Selected Publications</h2></div>
       <article class="publication">
-        <a class="publication-figure" href="assets/neurosonic-architecture.png" target="_blank" rel="noopener" aria-label="View NeuroSonic architecture at full size">
+        <a class="publication-figure" href="assets/neurosonic-architecture.png" aria-haspopup="dialog" aria-controls="architecture-dialog" aria-label="View NeuroSonic architecture at full size">
           <span class="publication-venue">MICCAI 2026</span>
           <img src="assets/neurosonic-detail.png" alt="NeuroSonic architecture detail: time-conditioned Transformer, audio decoder, and flow-matching objective." width="1604" height="1028" loading="lazy">
           <span class="figure-hint">Model architecture <span aria-hidden="true">↗</span></span>
@@ -87,5 +87,9 @@
 
     <footer><span>© <span id="copyright-year">2026</span> Wenhao Gao</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
   </main>
+  <dialog id="architecture-dialog" class="architecture-dialog" aria-labelledby="architecture-title">
+    <div class="architecture-toolbar"><h2 id="architecture-title">NeuroSonic architecture</h2><button class="architecture-close" type="button" aria-label="Close architecture preview">Close <span aria-hidden="true">×</span></button></div>
+    <img src="assets/neurosonic-architecture.png" alt="Complete NeuroSonic model architecture" width="1380" height="570">
+  </dialog>
 </body>
 </html>

@@ -62,3 +62,17 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', syncNavigation);
 syncNavigation();
 document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+const architectureLink = document.querySelector('.publication-figure');
+const architectureDialog = document.getElementById('architecture-dialog');
+architectureLink.addEventListener('click', event => {
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  architectureDialog.showModal();
+});
+architectureDialog.querySelector('.architecture-close').addEventListener('click', () => architectureDialog.close());
+architectureDialog.addEventListener('click', event => {
+  const rect = architectureDialog.getBoundingClientRect();
+  if (event.target === architectureDialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) architectureDialog.close();
+});
+architectureDialog.addEventListener('close', () => architectureLink.focus({ preventScroll: true }));
